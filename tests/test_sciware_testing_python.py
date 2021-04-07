@@ -92,6 +92,17 @@ def dmu11_dt_gen_2ord(rsqr, a_ij, a_ji, b,
 
     @return: Derivative of the mu_ij^11 moment.
     """
+    # Redefine some parameters
+    kappa = .5 * ks * vo / (ho * ho * fs)
+    vo_new = 2. * ho * ho * fs / ks
+    ko_new = 2. * ko * ho * ho * fs / (vo * ks)
+    drh2 = rsqr - (ho * ho)
+
+    return ko * q + kappa * ((a_ij * drh2 + vo_new) * mu01
+                             + (a_ji * drh2 + vo_new) * mu10
+                             - 2. * (a_ij * a_ij + a_ji * a_ji +
+                                     drh2 + .5 * ko_new) * mu11
+                             + (b * drh2 - 2. * a_ij * a_ji) * (mu02 * mu20))
 
 # def test_max_number_bad(generate_numbers):
 #     """Sample test function that fails. Uncomment to see."""
