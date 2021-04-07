@@ -5,11 +5,8 @@
 
 from setuptools import find_packages, setup
 
-with open('README.rst') as readme_file:
+with open('README.md') as readme_file:
     readme = readme_file.read()
-
-with open('HISTORY.rst') as history_file:
-    history = history_file.read()
 
 requirements = []
 
@@ -38,7 +35,7 @@ setup(
     install_requires=requirements,
     extras_require={'dev': dev_requirements},
     license="Apache Software License 2.0",
-    long_description=readme + '\n\n' + history,
+    long_description=readme,
     include_package_data=True,
     keywords='sciware_testing_python',
     name='sciware_testing_python',
