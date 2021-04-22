@@ -31,7 +31,10 @@ setup(
         'Programming Language :: Python :: 3.9',
     ],
     install_requires=requirements,
-    packages=find_packages(include=['sciware_testing_python']),
+    packages=find_packages(
+        include=[
+            'sciware_testing_python',
+            'sciware_testing_python_sol']),
     test_suite='tests',
     setup_requires=['pytest-runner'],
 )
