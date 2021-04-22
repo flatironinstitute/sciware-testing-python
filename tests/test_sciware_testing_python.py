@@ -5,7 +5,7 @@ import random
 
 import pytest
 
-from sciware_testing_python import sciware_testing_python
+import sciware_testing_python
 
 
 @pytest.fixture
