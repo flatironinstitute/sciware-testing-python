@@ -6,29 +6,29 @@ This is an example repository for writing tests, for the Sciware Testing session
 It demonstrates how to setup a repository to use GitHub actions to automatically run tests
 on the code.
 
-**.github/workflows/** - Directory containing the configuration file for GitHub actions.
+## Quick-start
 
-**`.github/workflows/test.yml`** - File detailing the system configurations to use for the tests.
+### Test
 
-**sciware_testing_python/** - Directory for all the code.
+```bash
+git clone https://github.com/flatironinstitute/sciware-testing-python.git
+cd sciware-testing-python
+python3 ./setup.py pytest
+```
 
-**`sciware_testing_python/__init.py__`** - File telling Python that there are executable files in this directory.
+## Forking This Project
 
-**`sciware_testing_python/sciware_testing_python.py`** - File with all of the code.
+## Contents
 
-**tests/** - Directory for the code which tests the code in `sciware_testing_python`.
-
-**`tests/test_sciware_testing_python.py`** - File containing the tests. 
-
-**.gitignore** - File which tells github what files to not track (optional)
-
-**LICENSE** - File containing the text of the license the code is released under. Having a license file allows other people to use the code.
-
-**README.md** - File generating this page.
-
-**requirements.txt** - File listing the packages required to run the code. It is used to configure 
-GitHub actions to automatically test the code.
-
-**setup.cfg** - File...
-
-**setup.py** - File..
+* **`.github/workflows/`** - Directory containing the configuration file for GitHub actions.
+* **`.github/workflows/test.yml`** - File detailing the system configurations to use for the tests.
+* **sciware_testing_python/** - Directory for all the code.
+* **`sciware_testing_python/__init.py__`** - File telling Python what to import with `sciware_testing_python` package.
+* **`sciware_testing_python/sciware_testing_python.py`** - File with all of the code.
+* **`tests/`** - Directory for the code which tests the code in `sciware_testing_python`.
+* **`tests/test_sciware_testing_python.py`** - File containing the tests.
+* **`.gitignore`** - File which tells github what files to not track (optional)
+* **`LICENSE`** - File containing the text of the license the code is released under. Having a license file allows other people to use the code.
+* **`README.md`** - File generating this page.
+* **`requirements.txt`** - File listing the packages required to run the code. It is included by setup.py.
+* **setup.py** - File describing the metadata for the package and rules to build/install/test it.
