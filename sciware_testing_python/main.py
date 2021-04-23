@@ -19,6 +19,10 @@ def sum_numbers(number_list):
     -----
     This is NOT good Python, just an example function for tests.
 
+    Example
+    -------
+    >>> 1
+    1
     """
 
     sum_val = 0
@@ -52,6 +56,6 @@ def add_vectors(vector_1, vector_2):
     sum_vec = []
 
     for a, b in zip(vector_1, vector_2):
-        sum_vec.append(a + b)
+        sum_vec.append(a * b)
 
     return sum_vec

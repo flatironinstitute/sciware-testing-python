@@ -9,15 +9,17 @@ import sciware_testing_python as stp
 def test_sum_numbers():
     """Sample test function for sum_numbers."""
 
+    assert 0 == stp.sum_numbers([])
+
     number_list = [2, 3, 4]
     our_result = stp.sum_numbers(number_list)
     assert our_result == sum(number_list)
 
 
 def test_adding_vectors():
-    v1 = [2, 3, 4]
-    v2 = [4, 9, 16]
-    assert stp.add_vectors(v1, v2) == [6, 12, 20]
+    v1 = [2, 0]
+    v2 = [2, 0]
+    assert stp.add_vectors(v1, v2) == [4, 0]
 
 
 def test_add_zero_length_vectors():
@@ -82,7 +84,7 @@ def test_parametrize_sum_numbers(number_list, expect_val):
     assert stp.sum_numbers(number_list) == expect_val
 
 
-@pytest.mark.xfail(strict=True)
+@pytest.mark.xfail
 def test_add_different_length_vectors():
     """
     """

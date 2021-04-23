@@ -6,4 +6,4 @@ __author__ = """sciware"""
 __email__ = 'sciware@flatironinstitute.org'
 __version__ = '0.1.0'
 
-from .sciware_testing_python import *
+from .main import *

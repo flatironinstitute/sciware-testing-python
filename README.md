@@ -1,6 +1,6 @@
 # Sciware Testing Examples and Exercises
 
-[![](https://github.com/flatironinstitute/sciware-testing-python/actions/workflows/test.yml/badge.svg)](https://github.com/flatironinstitute/sciware-testing-python/actions/workflows/test.yml/)
+[![](https://github.com/flatironinstitute/sciware-testing-python/actions/workflows/test.yml/badge.svg)](https://github.com/flatironinstitute/sciware-testing-python/actions)
 
 This is an example repository for writing tests, for the Sciware Testing session. 
 It demonstrates how to setup a repository to use GitHub actions to automatically run tests
@@ -41,10 +41,11 @@ pytest
 * **[`requirements.txt`](requirements.txt)** - File listing the packages required to run the code. It is included by setup.py.
 * **[`LICENSE`](LICENSE)** - File containing the text of the license the code is released under. Having a license file allows other people to use the code.
 * **[`sciware_testing_python/`](sciware_testing_python/)** - Directory for all the code.
-* **[`sciware_testing_python/__init.py__`** - File that python imports to define the `sciware_testing_python`](sciware_testing_python/__init.py__`** - File that python imports to define the `sciware_testing_python) package.
-* **[`sciware_testing_python/sciware_testing_python.py`](sciware_testing_python/sciware_testing_python.py)** - File with all of the code.
+* **[`sciware_testing_python/__init.py__`](sciware_testing_python/__init__.py)** - File that python imports to define the `sciware_testing_python package.
+* **[`sciware_testing_python/main.py`](sciware_testing_python/main.py)** - File with all of the code.
 * **[`tests/`** - Directory for the code which tests the code in `sciware_testing_python`](tests/`** - Directory for the code which tests the code in `sciware_testing_python).
-* **[`tests/test_sciware_testing_python.py`](tests/test_sciware_testing_python.py)** - File containing the tests.
+* **[`tests/test_1.py`](tests/test_1.py)** - File to fill in with some tests
+* **[`tests/test_examples.py`](tests/test_examples.py)** - File containing some tests
 * **[`.gitignore`](.gitignore)** - File which tells github what files to not track (optional)
 * **[`.github/workflows/`](.github/workflows/)** - Directory containing the configuration file for GitHub actions.
 * **[`.github/workflows/test.yml`](.github/workflows/test.yml)** - File detailing the system configurations to use for the tests.

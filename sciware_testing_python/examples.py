@@ -130,3 +130,39 @@ def add_vectors(vector_1, vector_2):
         sum_vec.append(a + b)
 
     return sum_vec
+
+def count_ones(input_list):
+    """Example function. Counts the number of 1s in a list.
+
+    Parameters
+    ----------
+    input_list : list
+        List of values
+
+    Returns
+    -------
+    int
+        Numbers of values that == 1
+
+    Notes
+    -----
+    This is NOT good Python, just an example function for tests.
+
+    Examples
+    --------
+    >>> count_ones([2,1,1,3,-1])
+    2
+
+    Empty lists are returned as zero
+    >>> count_ones([])
+    0
+
+    """
+
+    count = 0
+    for n in input_list:
+        if n == 1:
+            count += 1
+
+    return count
+
