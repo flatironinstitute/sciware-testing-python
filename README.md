@@ -6,11 +6,14 @@ This is an example repository for writing tests, for the Sciware Testing session
 It demonstrates how to setup a repository to use GitHub actions to automatically run tests
 on the code.
 
+- [Materials](https://github.com/flatironinstitute/learn-sciware-dev/tree/master/14_TestingPackaging)
+- [Workshop guide](https://flatironinstitute.github.io/learn-sciware-dev/14_TestingPackaging/guide.html)
+
 ## Quick-start
 
 ### Prerequisites
 
-python3 with pip3 (at le
+- python3 with pip3 (with optional virtualenv or conda)
 
 ### Install
 
