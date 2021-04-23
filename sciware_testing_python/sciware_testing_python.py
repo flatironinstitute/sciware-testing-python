@@ -52,6 +52,6 @@ def add_vectors(vector_1, vector_2):
     sum_vec = []
 
     for a, b in zip(vector_1, vector_2):
-        sum_vec += [a + b]
+        sum_vec.append(a + b)
 
     return sum_vec

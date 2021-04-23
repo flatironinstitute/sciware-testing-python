@@ -5,9 +5,11 @@
 
 from setuptools import find_packages, setup
 
+# load README.md contents to use as long_description
 with open('README.md') as readme_file:
     readme = readme_file.read()
 
+# load requirements.txt to use as install_requires
 with open('requirements.txt', 'r') as f:
     requirements = [l for l in f if l.strip() and not l.startswith('#')]
 
@@ -20,21 +22,18 @@ setup(
     version='0.1.0',
     long_description=readme,
     license="Apache Software License 2.0",
+    # some (optional) tags
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Natural Language :: English',
         'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
     ],
     install_requires=requirements,
-    packages=find_packages(
-        include=[
-            'sciware_testing_python',
-            'sciware_testing_python_sol']),
-    test_suite='tests',
-    setup_requires=['pytest-runner'],
+    packages=find_packages()
 )

@@ -117,47 +117,16 @@ def add_vectors(vector_1, vector_2):
     ValueError: add_vectors can only sum vectors that are lists.
 
     """
-    sum_vec = []
-    if len(vector_1) != len(vector_2):
-        raise RuntimeError(
-            'add_vectors can only add vectors of the same length.')
-
     if not isinstance(vector_1, list) or not isinstance(vector_2, list):
         raise ValueError(
             'add_vectors can only sum vectors that are lists.')
 
+    if len(vector_1) != len(vector_2):
+        raise RuntimeError(
+            'add_vectors can only add vectors of the same length.')
+
+    sum_vec = []
     for a, b in zip(vector_1, vector_2):
-        sum_vec += [a + b]
+        sum_vec.append(a + b)
 
     return sum_vec
-
-
-# std::vector<double> add_vectors(std::vector<double> &v1, std::vector<double> &v2)
-# {
-#     // Check inputs
-#     if (v1.size() != v2.size())
-#     {
-#         throw std::invalid_argument("There's a mismatch in vector size" + std::to_string(v1.size()) + "!=" + std::to_string(v2.size()));
-#     }
-
-#     //
-#     // Solution 1
-#     //
-
-#     // Add the vectors
-#     std::vector<double> new_vector(v1.size());
-
-#     for (size_t i = 0; i < v1.size(); i++)
-#     {
-#         new_vector[i] = v1[i] + v2[i];
-#     }
-
-#     //
-#     // Solution 2
-#     //
-
-#     // std::vector<double> new_vector = v1;
-#     // std::transform(new_vector.begin(), new_vector.end(), v2.begin(), new_vector.begin(), std::plus<double>());
-
-#     return new_vector;
-# }

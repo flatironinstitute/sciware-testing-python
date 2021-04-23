@@ -2,11 +2,8 @@
 """Tests for `sciware_testing_python` package."""
 
 import random
-
 import pytest
-
 import sciware_testing_python as stp
-# import sciware_testing_python_sol as stps
 
 
 def test_sum_numbers():
@@ -50,11 +47,6 @@ def generate_numbers():
 
     return random.sample(range(100), 10)
 
-
-# shortcuts for pytest decorators
-skip = pytest.mark.skip
-parametrize = pytest.mark.parametrize
-xfail = pytest.mark.xfail
 #######################################################################
 
 
@@ -73,7 +65,7 @@ def test_random_sum_numbers_add_1(generate_numbers):
     assert our_result == sum(generate_numbers) + 1
 
 
-@xfail
+@pytest.mark.xfail
 def test_sum_numbers_with_bad_args():
     """ Test sum numbers when not given good input
     """
@@ -90,7 +82,7 @@ def test_parametrize_sum_numbers(number_list, expect_val):
     assert stp.sum_numbers(number_list) == expect_val
 
 
-@xfail(strict=True)
+@pytest.mark.xfail(strict=True)
 def test_add_different_length_vectors():
     """
     """
@@ -99,7 +91,7 @@ def test_add_different_length_vectors():
     result = stp.add_vectors(v1, v2)  # doctest: +IGNORE_EXCEPTION_DETAIL
 
 
-@skip
+@pytest.mark.skip
 def test_add_skip_test():
     """ This test would fail if not for the decorator
     """
