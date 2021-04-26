@@ -1,4 +1,4 @@
-name: Test
+name: Example Tests
 on:
   - push
 jobs:
@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.7, 3.8]
+        python-version: [3.7, 3.8, 3.9]
 
     steps:
     - name: Checkout repository
@@ -21,4 +21,4 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: Test
-      run: python setup.py pytest
+      run: python setup.py pytest --doctest-modules
