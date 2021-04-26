@@ -37,6 +37,13 @@ pytest
 
 ## Forking This Project
 
+If you fork this project you should do the following things to make sure that your fork is correctly linked to your GitHub account:
+
+1.  If you haven't linked your GitHub account to [`codecov`](https://about.codecov.io/), do so now.
+2.  Change the badge URL at the top of `README.md` to point to your GitHub workflow build. To do this, replace `flatironinstitute` with your GitHub handle in the URLs of the badge.
+3.  Change the badge URL at the top of `README.md` to point to your [`codecov`](https://about.codecov.io/) report. Go to [`codecov`](https://about.codecov.io/), navigate to the `sciware-testing-python` project, then go to Settings > Badge.
+4.  Change your [`codecov`](https://about.codecov.io/) token in your GitHub actions file (in `.github/workflows`). To get your token go to [`codecov`](https://about.codecov.io/), navigate to the `sciware-testing-python` project, then go to Settings > General > `Repository Upload Token`. Copy this token and use it to set the `CODECOV_TOKEN` variable in `.github/workflows`.
+
 ## Contents
 
 * **[`README.md`](README.md)** - File generating this page.
