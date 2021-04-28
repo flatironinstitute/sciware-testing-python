@@ -27,8 +27,8 @@ def sum_numbers(number_list: List[float]) -> float:
     >>> sum_numbers(zero_number_list)
     0
 
-    Does not sum strings. Will return value error
-    >>> not_number_list = [2, 3, 'stuff']
+    Does not sum bools. Will return value error
+    >>> not_number_list = [2, 3, False]
     >>> sum_numbers(not_number_list) # doctest: +IGNORE_EXCEPTION_DETAIL
     Traceback (most recent call last):
         raise TypeError(
@@ -41,11 +41,6 @@ def sum_numbers(number_list: List[float]) -> float:
     Traceback (most recent call last):
         raise TypeError(
     TypeError: ...
-
-    Bools are alright though.
-    >>> bool_list = [True, False, False, True, True]
-    >>> sum_numbers(bool_list)
-    3
 
     Will sum tuples
     >>> number_tuple = (4, 9, 16)
