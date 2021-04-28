@@ -61,7 +61,7 @@ def sum_numbers(number_list: List[float]) -> float:
     sum_val: float = 0
     for n in number_list:
         if not isinstance(n, (float, int)):
-            raise ValueError(
+            raise TypeError(
                 'sum_numbers sums a list containing only ints and floats.')
         sum_val += n
 
