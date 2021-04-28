@@ -9,6 +9,6 @@ def test_sum2():
     # what's the sum of an empty list
     pass
 
-#@pytest.mark.xfail(strict=True)
+#@pytest.mark.xfail(strict=True, raises=TypeError)
 def test_sum_bools():
     pass
