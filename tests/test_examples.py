@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """Tests for `sciware_testing_python` package."""
+from typing import List
 
 import random
 import pytest
@@ -41,7 +42,7 @@ def test_add_zero_length_vectors():
 
 
 @pytest.fixture
-def generate_numbers():
+def generate_numbers() -> List[float]:
     """Sample pytest fixture. Generates list of random integers.
 
     See more at: http://doc.pytest.org/en/latest/fixture.html
@@ -52,7 +53,7 @@ def generate_numbers():
 #######################################################################
 
 
-def test_random_sum_numbers(generate_numbers):
+def test_random_sum_numbers(generate_numbers: List[float]):
     """Sample test function for sum_numbers, using pytest fixture."""
 
     our_result = stp.sum_numbers(generate_numbers)
@@ -60,7 +61,7 @@ def test_random_sum_numbers(generate_numbers):
 
 
 @pytest.mark.xfail
-def test_random_sum_numbers_add_1(generate_numbers):
+def test_random_sum_numbers_add_1(generate_numbers: List[float]):
     """Sample test function for sum_numbers, using pytest fixture."""
 
     our_result = stp.sum_numbers(generate_numbers)
@@ -80,7 +81,7 @@ def test_sum_numbers_with_bad_args():
     ([-2, 0, 1], -1),
     ([3.5, 7.25, -.75], 10),
 ])
-def test_parametrize_sum_numbers(number_list, expect_val):
+def test_parametrize_sum_numbers(number_list: List[float], expect_val: float):
     assert stp.sum_numbers(number_list) == expect_val
 
 
