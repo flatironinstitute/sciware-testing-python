@@ -1,8 +1,7 @@
 # For an intro guide see: https://docs.github.com/en/actions/quickstart
 # For a detailed guide: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows
 
-name: Test (exercise)
-name: Example Tests
+name: Exercise Tests
 on:
   - push # Run this workflow every time we push
 jobs:
