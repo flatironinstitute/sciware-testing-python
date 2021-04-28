@@ -3,7 +3,7 @@
 
 
 def sum_numbers(number_list):
-    """Example function. Sums a list of numbers using a for loop.
+    """Sums a list of numbers using a for loop.
 
     Parameters
     ----------
@@ -15,12 +15,13 @@ def sum_numbers(number_list):
     int or float
         Sum of list
 
-    Notes
-    -----
-    This is NOT good Python, just an example function for tests.
-
     Example
     -------
+    >>> list123 = [1,2,3]
+    >>> sum_numbers(list123)
+    6
+
+    Add another doctest below
     >>> 1
     1
     """
@@ -33,7 +34,7 @@ def sum_numbers(number_list):
 
 
 def add_vectors(vector_1, vector_2):
-    """Example function. Sums the same index elements of two list of numbers.
+    """Sums the same index elements of two list of numbers.
 
     Parameters
     ----------
@@ -48,14 +49,22 @@ def add_vectors(vector_1, vector_2):
     list
         Sum of lists
 
-    Notes
-    -----
-    This is NOT good Python, just an example function for tests.
 
     """
-    sum_vec = []
+    add_vec = []
 
     for a, b in zip(vector_1, vector_2):
-        sum_vec.append(a * b)
+        add_vec.append(a * b)
 
-    return sum_vec
+    return add_vec
+
+# def count_ones(input_list):
+#   count = 0
+#     for n in input_list:
+#         if n == 1:
+#             count += 1
+#
+#     return count
+
+# Make a new function which counts the number of twos in a list
+# def count_twos(input_list):
