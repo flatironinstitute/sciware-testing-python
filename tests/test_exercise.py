@@ -10,5 +10,5 @@ def test_sum2():
     pass
 
 #@pytest.mark.xfail(strict=True)
-def test_sum_strings():
+def test_sum_bools():
     pass
