@@ -22,3 +22,13 @@ jobs:
 
     - name: Install
       run: pip install .
+    
+    # - name: Test
+    #   run: #ADD TEST commands here
+
+    # - name: Codecov
+    #   uses: codecov/codecov-action@v1
+    #   with:
+    #     name: exercise-codecov
+    #     token:  # PUT YOUR TOKEN HERE
+    #     fail_ci_if_error: true
