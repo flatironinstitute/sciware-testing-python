@@ -25,3 +25,7 @@ jobs:
 
     - name: Test
       run: pytest --doctest-modules
+
+    - name: Typing
+      run: mypy
+
