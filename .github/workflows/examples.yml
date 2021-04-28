@@ -32,3 +32,7 @@ jobs:
         name: example-codecov
         token: c8fb235d-d1bc-45cf-9575-a32ed97eb8ee # PUT YOUR TOKEN HERE
         fail_ci_if_error: true
+
+    - name: Typing
+      run: mypy
+
