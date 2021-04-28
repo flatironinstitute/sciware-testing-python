@@ -10,5 +10,6 @@ def test_sum2():
     pass
 
 #@pytest.mark.xfail(strict=True, raises=TypeError)
-def test_sum_bools():
+def test_sum_strings():
+    #assert sciware_testing_python.sum_numbers(["1","2","3"]) == "123"
     pass
