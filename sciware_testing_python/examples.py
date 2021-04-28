@@ -16,10 +16,6 @@ def sum_numbers(number_list: List[float]) -> float:
     int or float
         Sum of list
 
-    Notes
-    -----
-    This is NOT good Python, just an example function for tests.
-
     Examples
     --------
     >>> number_list = [2, 3, 4]
@@ -31,25 +27,20 @@ def sum_numbers(number_list: List[float]) -> float:
     >>> sum_numbers(zero_number_list)
     0
 
-    Does not sum strings. Will return value error
-    >>> not_number_list = [2, 3, 'stuff']
+    Does not sum bools. Will return value error
+    >>> not_number_list = [2, 3, False]
     >>> sum_numbers(not_number_list) # doctest: +IGNORE_EXCEPTION_DETAIL
     Traceback (most recent call last):
-        raise ValueError(
-    ValueError: sum_numbers sums a list containing only ints and floats
+        raise TypeError(
+    TypeError: sum_numbers sums a list containing only ints and floats
 
     Nor will it sum list of lists, dicts, sets, or tuples.
     # doctest: +IGNORE_EXCEPTION_DETAIL
     >>> another_not_number_list = [[4], 5]
     >>> sum_numbers(another_not_number_list)
     Traceback (most recent call last):
-        raise ValueError(
-    ValueError: ...
-
-    Bools are alright though.
-    >>> bool_list = [True, False, False, True, True]
-    >>> sum_numbers(bool_list)
-    3
+        raise TypeError(
+    TypeError: ...
 
     Will sum tuples
     >>> number_tuple = (4, 9, 16)
@@ -60,8 +51,8 @@ def sum_numbers(number_list: List[float]) -> float:
 
     sum_val: float = 0
     for n in number_list:
-        if not isinstance(n, (float, int)):
-            raise ValueError(
+        if type(n) not in (float, int):
+            raise TypeError(
                 'sum_numbers sums a list containing only ints and floats.')
         sum_val += n
 
@@ -144,10 +135,6 @@ def count_ones(input_list: List[float]) -> int:
     -------
     int
         Numbers of values that == 1
-
-    Notes
-    -----
-    This is NOT good Python, just an example function for tests.
 
     Examples
     --------
