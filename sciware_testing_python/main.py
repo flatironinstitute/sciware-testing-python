@@ -25,9 +25,10 @@ def sum_numbers(number_list):
     1
     """
 
-    sum_val = 0
-    for n in number_list:
-        sum_val += n
+    sum_val = number_list[0]
+    for i in range(1, len(number_list)):
+        sum_val += number_list[i]
+
 
     return sum_val
 
