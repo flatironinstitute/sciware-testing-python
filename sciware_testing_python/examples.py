@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Main module template with example functions."""
-from typing import List
+from typing import List, TypeVar
 
 
 def sum_numbers(number_list: List[float]) -> float:
@@ -65,7 +65,7 @@ def sum_numbers(number_list: List[float]) -> float:
 
 
 def add_vectors(vector_1: List[float], vector_2: List[float]) -> List[float]:
-    """Example function. Sums the same index elements of two list of numbers.
+    """Example function. Adds the corresponding elements of two lists of numbers.
 
     Parameters
     ----------
@@ -79,10 +79,6 @@ def add_vectors(vector_1: List[float], vector_2: List[float]) -> List[float]:
     -------
     list
         Sum of lists
-
-    Notes
-    -----
-    This is NOT good Python, just an example function for tests.
 
     Examples
     --------
@@ -122,40 +118,49 @@ def add_vectors(vector_1: List[float], vector_2: List[float]) -> List[float]:
         raise RuntimeError(
             'add_vectors can only add vectors of the same length.')
 
-    sum_vec = []
+    add_vec = []
     for a, b in zip(vector_1, vector_2):
-        sum_vec.append(a + b)
+        add_vec.append(a + b)
 
-    return sum_vec
+    return add_vec
 
-def count_ones(input_list: List[float]) -> int:
-    """Example function. Counts the number of 1s in a list.
+A = TypeVar('A')
+def count_equal(input_list: List[A], target: A) -> int:
+    """Example function. Counts the number of target values in a list.
 
     Parameters
     ----------
     input_list : list
         List of values
+    target : any
+        Value to search for
 
     Returns
     -------
     int
-        Numbers of values that == 1
+        Numbers of values that == target
 
     Examples
     --------
-    >>> count_ones([2,1,1,3,-1])
+    >>> count_equal([2,1,1,3,-1], 1)
     2
 
     Empty lists are returned as zero
-    >>> count_ones([])
+    >>> count_equal([], [])
     0
 
     """
 
     count = 0
     for n in input_list:
-        if n == 1:
+        if n == target:
             count += 1
 
     return count
 
+
+def count_ones(input_list: List[float]) -> int:
+    return count_equal(input_list, 1)
+
+def count_twos(input_list: List[float]) -> int:
+    return count_equal(input_list, 2)
