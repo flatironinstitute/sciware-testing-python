@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 """Main module template with example functions."""
-from typing import List
 
 
-def sum_numbers(number_list: List[float]) -> float:
+def sum_numbers(number_list):
     """Example function. Sums a list of numbers using a for loop.
 
     Parameters
@@ -26,14 +25,14 @@ def sum_numbers(number_list: List[float]) -> float:
     1
     """
 
-    sum_val: float = 0
+    sum_val = 0
     for n in number_list:
         sum_val += n
 
     return sum_val
 
 
-def add_vectors(vector_1: List[float], vector_2: List[float]) -> List[float]:
+def add_vectors(vector_1, vector_2):
     """Example function. Sums the same index elements of two list of numbers.
 
     Parameters
