@@ -35,16 +35,16 @@ def sum_numbers(number_list: List[float]) -> float:
     >>> not_number_list = [2, 3, 'stuff']
     >>> sum_numbers(not_number_list) # doctest: +IGNORE_EXCEPTION_DETAIL
     Traceback (most recent call last):
-        raise ValueError(
-    ValueError: sum_numbers sums a list containing only ints and floats
+        raise TypeError(
+    TypeError: sum_numbers sums a list containing only ints and floats
 
     Nor will it sum list of lists, dicts, sets, or tuples.
     # doctest: +IGNORE_EXCEPTION_DETAIL
     >>> another_not_number_list = [[4], 5]
     >>> sum_numbers(another_not_number_list)
     Traceback (most recent call last):
-        raise ValueError(
-    ValueError: ...
+        raise TypeError(
+    TypeError: ...
 
     Bools are alright though.
     >>> bool_list = [True, False, False, True, True]
