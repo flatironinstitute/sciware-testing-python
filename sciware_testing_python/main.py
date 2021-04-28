@@ -15,10 +15,6 @@ def sum_numbers(number_list):
     int or float
         Sum of list
 
-    Notes
-    -----
-    This is NOT good Python, just an example function for tests.
-
     Example
     -------
     >>> 1
@@ -47,11 +43,6 @@ def add_vectors(vector_1, vector_2):
     -------
     list
         Sum of lists
-
-    Notes
-    -----
-    This is NOT good Python, just an example function for tests.
-
     """
     sum_vec = []
 

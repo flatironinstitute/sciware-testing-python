@@ -16,10 +16,6 @@ def sum_numbers(number_list: List[float]) -> float:
     int or float
         Sum of list
 
-    Notes
-    -----
-    This is NOT good Python, just an example function for tests.
-
     Examples
     --------
     >>> number_list = [2, 3, 4]
@@ -144,10 +140,6 @@ def count_ones(input_list: List[float]) -> int:
     -------
     int
         Numbers of values that == 1
-
-    Notes
-    -----
-    This is NOT good Python, just an example function for tests.
 
     Examples
     --------
